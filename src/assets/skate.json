@@ -1,0 +1,64 @@
+[
+    {          
+        "marque":"Element",
+        "description":"Hirotton Mark Appleyard",
+        "prix":37,
+        "stock":3
+    },
+    {
+        "marque":"Element",
+        "description":"Hirotton Ethan Loy",
+        "prix":48,
+        "stock":4
+    },
+    {
+        "marque":"Element",
+        "description":"Landrein Brandon Westgate",
+        "prix":48,
+        "stock":5
+    },
+    {
+        "marque":"Element",
+        "description":"Landrein Gabriel Fortunato",
+        "prix":42,
+        "stock":5
+    },
+    {
+        "marque":"Element",
+        "description":"Element x Jake Foreman Forman",
+        "prix":48,
+        "stock":5
+    },
+    {
+        "marque":"Element",
+        "description":"Pelago Silvo C 8.38",
+        "prix":52,
+        "stock":9
+    },
+
+    {
+        "marque":"Element",
+        "description":"Pelago Silvo C 8.38",
+        "prix":52,
+        "stock":9
+    },
+    {
+        "marque":"Element",
+        "description":"Pelago Silvo C 8.38",
+        "prix":52,
+        "stock":9
+    },
+    {
+        "marque":"Element",
+        "description":"Pelago Silvo C 8.38",
+        "prix":52,
+        "stock":9
+    },
+    {
+        "marque":"Element",
+        "description":"Pelago Silvo C 8.38",
+        "prix":52,
+        "stock":9
+    }
+
+]
