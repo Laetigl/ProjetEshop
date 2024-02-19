@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Navbar from './components/Navbar'
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <section className='w-[100%]'>
-      
+      <Navbar />
     </section>
   )
 }
