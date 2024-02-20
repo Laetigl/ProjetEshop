@@ -2,16 +2,16 @@ import { useState } from 'react'
 import './App.css'
 import Cards from './components/Cards'
 
-import skate1 from "../src/assets/images/skate1-removebg-preview.png"
-import skate2 from "../src/assets/images/skate2-removebg-preview.png"
-import skate3 from "../src/assets/images/skate3-removebg-preview.png"
-import skate4 from "../src/assets/images/skate4-removebg-preview.png"
-import skate5 from "../src/assets/images/skate5-removebg-preview.png"
-import skate6 from "../src/assets/images/skate6-removebg-preview.png"
-import skate7 from "../src/assets/images/skate7-removebg-preview.png"
-import skate8 from "../src/assets/images/skate8-removebg-preview.png"
-import skate9 from "../src/assets/images/skate9-removebg-preview.png"
-import skate10 from "../src/assets/images/skate10-removebg-preview.png"
+import skate1 from "../src/assets/images/skate1.png"
+import skate2 from "../src/assets/images/skate2.png"
+import skate3 from "../src/assets/images/skate3.png"
+import skate4 from "../src/assets/images/skate4.png"
+import skate5 from "../src/assets/images/skate5.png"
+import skate6 from "../src/assets/images/skate6.png"
+import skate7 from "../src/assets/images/skate7.png"
+import skate8 from "../src/assets/images/skate8.png"
+import skate9 from "../src/assets/images/skate9.png"
+import skate10 from "../src/assets/images/skate10.png"
 import data from "../src/assets/skate.json"
 
 function App() {
