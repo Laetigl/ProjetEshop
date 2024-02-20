@@ -38,7 +38,6 @@ function App() {
     setPrice([...price,(item)])
   }
 
-
   const[quantityBasket,setQuantityBasket] = useState(0)
 
   return (
