@@ -1,64 +1,82 @@
 [
-    {   "image":0,    
+    {  "skate1":{       
         "marque":"Element",
         "description":"Hirotton Mark Appleyard",
         "prix":37,
         "stock":3
-    },
-    {   "image":1, 
+        }
+    } ,
+    
+    {   "skate2":{       
         "marque":"Element",
         "description":"Hirotton Ethan Loy",
         "prix":48,
         "stock":4
+        }
     },
-    {   "image":2, 
+
+    {   "skate3":{    
         "marque":"Element",
         "description":"Landrein Brandon Westgate",
         "prix":48,
         "stock":5
+        }
     },
-    {   "image":3, 
+
+    {   "skate4":{    
         "marque":"Element",
         "description":"Landrein Gabriel Fortunato",
         "prix":42,
         "stock":5
+        }
     },
-    {   "image":4, 
+
+    {   "skate5":{    
         "marque":"Element",
         "description":"Element x Jake Foreman Forman",
         "prix":48,
         "stock":5
+        }  
     },
-    {   "image":5, 
+
+    {   "skate6":{    
         "marque":"Element",
         "description":"Pelago Silvo C 8.38",
         "prix":52,
-        "stock":9
+        "stock":9       
+        }
     },
 
-    {   "image":6, 
+    { "skate7":{    
         "marque":"Element",
         "description":"Pelago Silvo C 8.38",
         "prix":51,
         "stock":9
+        }
     },
-    {   "image":7, 
+
+    {  "skate8":{    
         "marque":"Element",
         "description":"Pelago Silvo C 8.38",
         "prix":42,
         "stock":9
+        }
     },
-    {   "image":8, 
+
+    { "skate9":{    
         "marque":"Element",
         "description":"Pelago Silvo C 8.38",
         "prix":36,
         "stock":9
+        }
     },
-    {   "image":9, 
+
+    { "skate10":{    
         "marque":"Element",
         "description":"Pelago Silvo C 8.38",
         "prix":60,
         "stock":9
+        }
     }
 
 ]
