@@ -38,27 +38,40 @@
 
     {   "image":6, 
         "marque":"Element",
-        "description":"Pelago Silvo C 8.38",
+        "description":"Combine Westgate",
         "prix":51,
-        "stock":9
+        "stock":10
     },
     {   "image":7, 
         "marque":"Element",
-        "description":"Pelago Silvo C 8.38",
+        "description":"Disconnect Water",
         "prix":42,
-        "stock":9
+        "stock":14
     },
     {   "image":8, 
         "marque":"Element",
-        "description":"Pelago Silvo C 8.38",
+        "description":"Pelago Silvo B 8.38",
         "prix":36,
-        "stock":9
+        "stock":8
     },
     {   "image":9, 
         "marque":"Element",
-        "description":"Pelago Silvo C 8.38",
-        "prix":60,
+        "description":"Day Still Life",
+        "prix":45,
         "stock":9
+    },
+    {   "image":10, 
+        "marque":"Element",
+        "description":"Free Jaakko Ojanen",
+        "prix":57,
+        "stock":10
+    },
+    {   "image":11, 
+        "marque":"Element",
+        "description":"Rise Up Vitoria Mendonca",
+        "prix":59,
+        "stock":12
     }
+
 
 ]

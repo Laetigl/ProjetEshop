@@ -8,13 +8,14 @@ export default function Basket(props) {
 const[chooseImg,setChooseImg] = useState([
 
 ])
+let money = 200
 
 let totalPrice = props.price.reduce((previousValue, currentValue) => {
     return previousValue + currentValue;
   }, 0);
 
   return (
-    <div className={`flex  items-center flex-col w-[80%] h-[100vh] bg-[#a48b6b] top-[0] fixed ${props.slide == 1?"right-[0]" : "right-[-500px]"} transition-[10s] pt-[30px]`}>
+    <div className={`flex  items-center flex-col w-[80%] lg:w-[400px] h-[100vh] bg-[#a48b6b] top-[0] fixed ${props.slide == 1?"right-[0]" : "right-[-500px]"} duration-[0.7s] pt-[30px]`}>
         <button className='absolute right-[30px] top-[20px] text-white' onClick={()=>{props.setSlide(0)}}> <img src={close} className='w-[30px] ' alt="" /></button>
         <img className='w-[70px]' src={logoBasket} alt="" />
         <p className='w-[80%] h-[1px] bg-black'></p>
@@ -26,13 +27,14 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
 
             {props.shopping.map((element, key) => {
                 return (
-                    <div key={key} className='flex'>
+                    <div key={key} className={` ${props.discard == 0?"flex" :"hidden"}`}>
                         <img className='w-[150px]' src={props.image[props.imgBasket[key]]} alt="" />
                         <div className='flex flex-col gap-[20px] justify-center items-start'>
                             <div className='flex gap-[60px]'>
                                 <h1 className='font-bold'>{element}</h1>
-                                <button><img className="w-[30px] drop-shadow-2xl" src={remove} alt="" /></button>
+                                <button onClick={()=> {props.setDiscard(1)}}><img className="w-[30px] drop-shadow-2xl" src={remove} alt="" /></button>
                             </div>
+                            <p>{props.descriptive[props.arrayDescriptive[key]]}</p>
                             <p>Quantité : {props.quantityBasket}</p>
                             <p>Prix : {props.price[key]}€</p>
                         </div>
@@ -48,7 +50,7 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
             <button className='text-[20px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest'>PAYER</button>
         </div>
         <div>
-            <h3>My money : €</h3>
+            <h3>My money :{money - props.price}€</h3>
         </div>
     </div>
   )

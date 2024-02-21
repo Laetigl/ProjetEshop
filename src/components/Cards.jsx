@@ -9,7 +9,7 @@ export default function Cards(props) {
   {props.quantityBasket>props.element.stock ? props.setQuantityBasket(props.element.stock) : "none"}
 
   return (   
-    <div className='max-sm:w-[200px]'>
+    <div className='max-sm:w-[200px] lg:w-[300px] lg:p-[20px]'>
       <div className='w-[100%] h-fit rounded-[10px] bg-[#e9e9e7] pb-[10px] flex flex-col justify-center items-center shadow-lg'>
           <img className='w-[150px] flex justify-center items-center' src={props.img} alt="" />
           <div className='textCard'>
@@ -19,6 +19,8 @@ export default function Cards(props) {
                 <p className='text-[10px] text-[#8d6e46]'>{props.element.prix}€</p>
                 <p className='text-[10px] text-[#8d6e46]'>Quantité : {quantity}</p>
               </div>
+          {
+            quantity >0 ?
           <button className={`text-[10px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest font-bold`} 
           onClick={()=>{{quantity>0 ? props.setSlide(1):""}; 
                         {quantity>0 && stockBasket<1? props.adding(props.element.marque):"" } ;
@@ -27,8 +29,13 @@ export default function Cards(props) {
                         {props.setQuantityBasket(props.quantityBasket+1)};
                         {setStockBasket(stockBasket+1)}
                         {props.addingPrice(props.element.prix)} ;
+                        {props.addingDescription(props.element.description)}
                         }}>      
           {quantity == 0? "OUT OF STOCK":"ADD TO BASKET"}</button>
+          :
+          <button disabled className={`text-[10px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest font-bold`} >      
+          {quantity == 0? "OUT OF STOCK":"ADD TO BASKET"}</button>
+          }
           </div>
       </div>      
     </div>
