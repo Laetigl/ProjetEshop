@@ -1,8 +1,14 @@
-.bannier{
-   height: 400px;
-    background: url('./../assets/style-skateur.jpg');
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
+
+    .bannier{
+        height: 600px;
+         background:url('./../assets/style-skateur.jpg');
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         width: 100%;
+        
+
+     }
+  
