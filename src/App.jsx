@@ -18,6 +18,8 @@ import skate12 from  "../src/assets/images/skate12.png"
 import data from "../src/assets/skate.json"
 import Basket from './components/Basket'
 import Resume from './components/Resume'
+import Footer from './components/Footer'
+import Header from './components/navbar'
 
 function App() {
 
@@ -62,6 +64,7 @@ function App() {
 
   return (
     <section className='w-[100%] relative'>
+      <Header></Header>
       <Resume setSlide={setSlide} ></Resume>
       <div className='flex flex-wrap p-2 justify-center items-center gap-2 pt-[60px]'>
         {data.map((element, key) => (
@@ -84,6 +87,7 @@ function App() {
         ))}
       </div>   
       <Basket slide={slide} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
+      <Footer></Footer>
     </section>
   )
 }
