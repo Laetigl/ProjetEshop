@@ -6,9 +6,7 @@ import logoBasket from "../assets/images/logoSkate.png"
 
 export default function Basket(props) {
 const[chooseImg,setChooseImg] = useState([
-
 ])
-let money = 200
 
 let totalPrice = props.price.reduce((previousValue, currentValue) => {
     return previousValue + currentValue;
@@ -25,32 +23,67 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
                 setChooseImg([...chooseImg,element])
             })} */}
 
-            {props.shopping.map((element, key) => {
+            {/* {props.shopping.map((element, key) => {
                 return (
                     <div key={key} className={` ${props.discard == 0?"flex" :"hidden"}`}>
                         <img className='w-[150px]' src={props.image[props.imgBasket[key]]} alt="" />
                         <div className='flex flex-col gap-[20px] justify-center items-start'>
                             <div className='flex gap-[60px]'>
                                 <h1 className='font-bold'>{element}</h1>
-                                <button onClick={()=> {props.setDiscard(1)}}><img className="w-[30px] drop-shadow-2xl" src={remove} alt="" /></button>
+                                <button onClick={()=> {{props.setDiscard(1)}; {props.setMyMoney(props.myMoney+  props.price[key])}}}><img className="w-[30px] drop-shadow-2xl" src={remove} alt="" /></button>
                             </div>
-                            <p>{props.descriptive[props.arrayDescriptive[key]]}</p>
+                            <p>{props.arrayDescriptive[key]}</p>
+                            <p>Quantité : {props.quantityBasket}</p>
+                            <p>Prix : {props.price[key]}€</p>
+                        </div>
+                    </div>
+                )
+            })} */}
+
+            {props.shopping.map((element, key) => {
+                return (
+                    <div key={key} className='flex'>
+                        <img className='w-[150px]' src={props.image[props.imgBasket[key]]} alt="" />
+                        <div className='flex flex-col gap-[20px] justify-center items-start'>
+                            <div className='flex gap-[60px]'>
+                                <h1 className='font-bold'>{element}</h1>
+                                <button onClick={()=> {{props.setDiscard(1)}; {props.setMyMoney(props.myMoney + props.price[key])}}}><img className="w-[30px] drop-shadow-2xl" src={remove} alt="" /></button>
+                            </div>
+                            <p>{props.arrayDescriptive[key]}</p>
                             <p>Quantité : {props.quantityBasket}</p>
                             <p>Prix : {props.price[key]}€</p>
                         </div>
                     </div>
                 )
             })}
+
+            {/* <ul>
+                {props.shopping.map((item, index) => (
+                    <li key={index}>
+                        <div><img src="" alt="" /></div>
+                        <div>
+                            <p>{item.marque}</p>
+                            <p>{item.description}</p>
+                            <p>{item.prix}</p>
+                            <p>TEST</p>
+                        </div>
+                    </li>
+                ))}
+            </ul> */}
+
+
         </div>
-        <div className=''>
+        <div className='flex justify-start items-start'>
             <h1>TOTAL : {totalPrice}€</h1>
-            {console.log(totalPrice)}    
+            {console.log(totalPrice)}
         </div>
         <div className='flex justify-center items-center mt-[30px]'>
-            <button className='text-[20px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest'>PAYER</button>
+            <button className='text-[20px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest'>PAY</button>
         </div>
-        <div>
-            <h3>My money :{money - props.price}€</h3>
+        <div className='flex'>
+            <h3>SOLDE :{props.myMoney}€</h3>
+            {console.log(props.myMoney)}
+
         </div>
     </div>
   )

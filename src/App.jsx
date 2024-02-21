@@ -20,26 +20,30 @@ import Basket from './components/Basket'
 import Resume from './components/Resume'
 
 function App() {
+
+  const[myMoney,setMyMoney]=useState(200)
+
   let arraySkate = [skate1,skate2,skate3,skate4,skate5,skate6,skate7,skate8,skate9,skate10,skate11,skate12]
   const[slide,setSlide] = useState(0) 
   const[price,setPrice]= useState([
   ])
   const[shopping,setShopping]= useState([
   ])
-  const[descriptive,setDescriptive]=useState((data).map(element => element.description))
-  console.log(descriptive);
+  // const[descriptive,setDescriptive]=useState((data).map(element => element.description))
+  // console.log(descriptive);
 
   const[arrayDescriptive,setArrayDescriptive] = useState([
 
   ])
 
+  let addingDescription = (item) => {
+    setArrayDescriptive([...arrayDescriptive, (item)])
+  }
+
   let adding = (itemun) => {
     setShopping([...shopping, (itemun)])
   }
 
-  let addingDescription = (item) => {
-    setArrayDescriptive([...descriptive, (item)])
-  }
   
   // Fonction va permettre de récuperer la valeur de la carte et le tableau vide va récupérer ces valeurs du json
   const[imgBasket,setImgBasket] = useState([
@@ -59,13 +63,12 @@ function App() {
   return (
     <section className='w-[100%] relative'>
       <Resume setSlide={setSlide} ></Resume>
-      <div className='flex flex-wrap p-2 justify-center items-center gap-2'>
+      <div className='flex flex-wrap p-2 justify-center items-center gap-2 pt-[60px]'>
         {data.map((element, key) => (
             <div key={key}>
               <Cards
                 element={element}
                 img={arraySkate[element.image]}
-                descriptive={descriptive}
                 setSlide={setSlide}
                 adding={adding}
                 addingImg={addingImg}
@@ -74,11 +77,13 @@ function App() {
                 setImgBasket={setImgBasket}
                 setQuantityBasket={setQuantityBasket}
                 quantityBasket={quantityBasket}
+                myMoney={myMoney}
+                setMyMoney={setMyMoney}
               ></Cards>
             </div>
         ))}
       </div>   
-      <Basket slide={slide} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} descriptive = {descriptive} setArrayDescriptive={setArrayDescriptive}></Basket>  
+      <Basket slide={slide} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
     </section>
   )
 }
