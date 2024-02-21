@@ -19,7 +19,7 @@ import data from "../src/assets/skate.json"
 import Basket from './components/Basket'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
-import Header from './components/navbar'
+import Header from './components/Navbar'
 
 function App() {
 
@@ -63,7 +63,7 @@ function App() {
   const[discard,setDiscard] = useState(0)
 
   return (
-    <section className='w-[100%] relative'>
+    <section className='w-[100vw] relative'>
       <Header></Header>
       <Resume setSlide={setSlide} ></Resume>
       <div className='flex flex-wrap p-2 justify-center items-center gap-2 pt-[60px]'>

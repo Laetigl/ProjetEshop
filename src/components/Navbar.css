@@ -1,5 +1,4 @@
 
-
     .bannier{
         height: 600px;
          background:url('./../assets/style-skateur.jpg');
@@ -11,4 +10,8 @@
         
 
      }
-  
+     
+    .titleSkate{
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-size: 43px;
+    }

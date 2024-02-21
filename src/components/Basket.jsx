@@ -13,7 +13,7 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
   }, 0);
 
   return (
-    <div className={`flex  items-center flex-col w-[80%] lg:w-[400px] h-[100vh] bg-[#a48b6b] top-[0] fixed ${props.slide == 1?"right-[0]" : "right-[-500px]"} duration-[0.7s] pt-[30px]`}>
+    <div className={`flex  items-center flex-col w-[80%] lg:w-[400px] h-[100vh] bg-[#a48b6b] top-[0] fixed z-[10] ${props.slide == 1?"right-[0]" : "right-[-500px]"} duration-[0.7s] pt-[30px]`}>
         <button className='absolute right-[30px] top-[20px] text-white' onClick={()=>{props.setSlide(0)}}> <img src={close} className='w-[30px] ' alt="" /></button>
         <img className='w-[70px]' src={logoBasket} alt="" />
         <p className='w-[80%] h-[1px] bg-black'></p>
