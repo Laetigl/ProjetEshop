@@ -13,7 +13,7 @@ import skate8 from "../src/assets/images/skate8.png"
 import skate9 from "../src/assets/images/skate9.png"
 import skate10 from "../src/assets/images/skate10.png"
 import skate11 from  "../src/assets/images/skate11.png"
-import skate12 from  "../src/assets/images/skate12.png"
+  import skate12 from  "../src/assets/images/skate12.png"
 
 import data from "../src/assets/skate.json"
 import Basket from './components/Basket'
@@ -23,8 +23,10 @@ import Header from './components/Navbar'
 
 function App() {
 
-  const[myMoney,setMyMoney]=useState(200)
-
+  const[myMoney,setMyMoney]=useState(800)
+  if (myMoney <0) {
+    setMyMoney(0)
+  }
   let arraySkate = [skate1,skate2,skate3,skate4,skate5,skate6,skate7,skate8,skate9,skate10,skate11,skate12]
   const[slide,setSlide] = useState(0) 
   const[price,setPrice]= useState([
@@ -33,7 +35,7 @@ function App() {
   ])
   // const[descriptive,setDescriptive]=useState((data).map(element => element.description))
   // console.log(descriptive);
-
+  const [all, setAll] = useState([])
   const[arrayDescriptive,setArrayDescriptive] = useState([
 
   ])
@@ -57,7 +59,11 @@ function App() {
   let addingPrice = (item)=>{
     setPrice([...price,(item)])
   }
-
+  let addingAll = (item)=>{
+    setAll([...all,(item)])
+    console.log(all);
+  
+  }
   const[quantityBasket,setQuantityBasket] = useState(0)
 
   const[discard,setDiscard] = useState(0)
@@ -79,6 +85,7 @@ function App() {
                 addingDescription={addingDescription}
                 setImgBasket={setImgBasket}
                 setQuantityBasket={setQuantityBasket}
+                addingAll={addingAll}
                 quantityBasket={quantityBasket}
                 myMoney={myMoney}
                 setMyMoney={setMyMoney}
@@ -86,7 +93,7 @@ function App() {
             </div>
         ))}
       </div>   
-      <Basket slide={slide} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
+      <Basket slide={slide}  all={all} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
       <Footer></Footer>
     </section>
   )
