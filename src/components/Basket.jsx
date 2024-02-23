@@ -8,11 +8,21 @@ export default function Basket(props) {
 const[chooseImg,setChooseImg] = useState([
 ])
 
-let totalPrice = props.price.reduce((previousValue, currentValue) => {
-    return previousValue + currentValue;
-  }, 0);
+
   const array = [...new Set(props.all)];
- 
+  const [prixT, setprixT] = useState([])
+//  let prixSomme =(prix)=>{
+//     setprixT([...prixT,prix])
+//  }
+//   const [quantityT, setquantityT] = useState([])
+//  let quantitySomme =(quantity)=>{
+//     setquantityT([...quantityT,quantity])
+//  }
+//  let totalPrice = prixT.reduce((previousValue, currentValue) => {
+//     return previousValue + currentValue;
+//   }, 0)*quantityT.reduce((previousValue, currentValue) => {
+//     return previousValue + currentValue;
+//   }, 0);
   return (
     <div className={`flex  items-center flex-col w-[80%] lg:w-[400px] h-[100vh] bg-[#a48b6b] top-[0] fixed z-[10] ${props.slide == 1?"right-[0]" : "right-[-500px]"} duration-[0.7s] pt-[30px]`}>
         <button className='absolute right-[30px] top-[20px] text-white' onClick={()=>{props.setSlide(0)}}> <img src={close} className='w-[30px] ' alt="" /></button>
@@ -43,9 +53,12 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
             })} */}
 
             {array.map((element, key) => {
+                // prixSomme(element.prix)
+                // quantitySomme(element.quantity)
                 return (
                     <div key={key} className={`flex ${element.quantity<1?`hidden`:``}`}>
-                        <img className='w-[150px]' src={props.image[props.imgBasket[key]]} alt="" />
+                        <img className='w-[150px]' src={new URL(`../assets/images/${element.src}`,import.meta.url).href} alt="" />
+                       
                         <div className='flex flex-col gap-[20px] justify-center items-start'>
                             <div className='flex gap-[60px]'>
                                 <h1 className='font-bold'>{element.marque}</h1>
@@ -75,9 +88,10 @@ let totalPrice = props.price.reduce((previousValue, currentValue) => {
 
 
         </div>
+        {}
         <div className='flex justify-start items-start'>
-            <h1>TOTAL : {totalPrice}€</h1>
-            {console.log(totalPrice)}
+            <h1>TOTAL : {}€</h1>
+            {/* {console.log(totalPrice)} */}
         </div>
         <div className='flex justify-center items-center mt-[30px]'>
             <button className='text-[20px] text-white bg-[#8d6e46] rounded-[5px] p-[5px] border-[2px] border-[#4e251e] items-center justify-center cursor-pointer tracking-widest'>PAY</button>
