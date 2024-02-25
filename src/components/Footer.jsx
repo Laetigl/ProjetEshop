@@ -7,7 +7,7 @@ import './Footer.css'
 
 export default function Footer() {
   return (
-    <div className='w-[100vw] p-[10px] bg-[#8d6e46] flex flex-col gap-[7px]'>
+    <div className='w-[100%] pt-[10px] pb-[10px] bg-[#8d6e46] flex flex-col gap-[7px]'>
         <h1 className="footerTitle text-[#e9e9e7] text-[30px]">Souls Skate</h1>
         <p className='text-[10px]'>	&#169; Copyright 2024, Souls Skate. All Rights Reserved.</p>
         <div className='flex gap-[20px] justify-center items-center'>

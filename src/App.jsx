@@ -69,10 +69,10 @@ function App() {
   const[discard,setDiscard] = useState(0)
 
   return (
-    <section className='w-[100vw] relative'>
+    <section className='w-[100%] relative'>
       <Header></Header>
       <Resume setSlide={setSlide} ></Resume>
-      <div className='flex flex-wrap p-2 justify-center items-center gap-2 pt-[60px]'>
+      <div className=' w-[100%] flex flex-wrap justify-center items-center gap-2 pt-[60px]'>
         {data.map((element, key) => (
             <div key={key}>
               <Cards
@@ -93,7 +93,7 @@ function App() {
             </div>
         ))}
       </div>   
-      <Basket slide={slide}  all={all} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
+      <Basket slide={slide}  all={all} setSlide={setSlide} shopping={shopping} image={arraySkate} imgBasket={imgBasket} quantityBasket={quantityBasket} price={price} setPrice={setPrice} setMyMoney={setMyMoney} discard={discard} setDiscard={setDiscard} arrayDescriptive={arrayDescriptive} setArrayDescriptive={setArrayDescriptive} setMyMoney={setMyMoney} myMoney={myMoney} prix={data.prix}></Basket>  
       <Footer></Footer>
     </section>
   )

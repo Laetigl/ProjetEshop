@@ -12,7 +12,7 @@ export default function Navbar() {
         <img src={logo} alt="" srcset="" className='md:size-[80px] max-sm:size-[80px] justify-center items-center' />
       </div>
       </div>
-    <div className='bannier md:w-[100vw] bg-black pt-20 ' >
+    <div className='bannier md:w-[100vw] bg-black  ' >
       {/* <img className='sm:opacity-25 ' src={banner} alt="" srcset="" /> */}
       <div className='h-[100%] w-[100%] bg-[#00000090]'></div>
     </div>

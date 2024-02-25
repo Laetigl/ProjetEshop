@@ -22,15 +22,15 @@ export default function Cards(props) {
    
   }
   return (   
-    <div className='max-sm:w-[200px] lg:w-[300px] lg:p-[20px]'>
+    <div className='max-sm:w-[200px] lg:w-[350px] lg:p-[20px]'>
       <div className='w-[100%] h-fit rounded-[10px] bg-[#e9e9e7] pb-[10px] flex flex-col justify-center items-center shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110'>
           <img className='w-[150px] flex justify-center items-center' src={props.img} alt="" />
           <div className='textCard'>
               <h1 className='font-bold text-[#4e251e] tracking-widest'>{props.element.marque}</h1>
               <div className='flex flex-col justify-start items-start p-[10px] tracking-wide'>
                 <p className='text-[12px] text-[#8d6e46]'>{props.element.description}</p>
-                <p className='text-[10px] text-[#8d6e46]'>{props.element.prix}€</p>
-                <p className='text-[10px] text-[#8d6e46]'>{props.element.stock}</p>
+                <p className='text-[10px] text-[#8d6e46]'>prix: {props.element.prix}€</p>
+                <p className='text-[10px] text-[#8d6e46]'>stock: {props.element.stock==1?'derniere chance':props.element.stock}</p>
               </div>
           {
             props.element.stock >0 && props.myMoney >0 ?
